@@ -1,0 +1,65 @@
+\ProvidesPackage{preamble}
+
+%% Language and font encodings
+\usepackage[english]{babel}
+\usepackage[utf8x]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{mathptmx}
+
+% Remove all hyphenation - doesn't work well
+% \hyphenpenalty=10000
+% \exhyphenpenalty=10000
+
+%% Sets page size and margins
+\usepackage[a4paper,top=2cm,bottom=2cm,left=3.5cm,right=3.5cm,marginparwidth=3cm]{geometry}
+
+\usepackage{titlesec}
+\newcommand{\sectionbreak}{\clearpage}
+
+\usepackage{tikz}
+\usetikzlibrary{arrows,shapes,positioning,shadows,trees}
+
+%% Useful packages
+\usepackage{pdfpages}
+\usepackage{rotating}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{rotating}
+\usepackage{pdflscape}
+\usepackage{pgfgantt}
+\usepackage{hvfloat}
+\usepackage{multirow}
+\usepackage{pgfplots}
+\usepackage{url}
+\usepackage{xparse}
+\usepackage{fancybox}
+\usepackage[page]{appendix}
+\usepackage{listings}
+\usepackage[colorlinks=true, allcolors=blue]{hyperref}
+\usepackage{caption}
+\usepackage{afterpage}
+\usepackage{lscape}
+\usepackage{enumitem}
+\usepackage{tabularx}
+\usepackage{color}
+\usepackage{enumitem}
+\usepackage{listings}
+\usepackage{xcolor}
+
+\hypersetup{
+    colorlinks = false
+}
+
+%% Section Numbering
+%\setcounter{secnumdepth}{0} % no sections will be numbered
+%\setcounter{secnumdepth}{1} % only sections will be numbered
+%\setcounter{secnumdepth}{2} % sections and subsections will be numbered
+%\setcounter{secnumdepth}{3} % sections, subsections and subsubsections will be numbered
+
+%% TrueType font for code. use \codeword{} around sections of code in your document
+\NewDocumentCommand{\codeword}{v}{
+  \texttt{\textcolor{black}{#1}}
+}
+
+
+\pgfplotsset{compat=1.16}
