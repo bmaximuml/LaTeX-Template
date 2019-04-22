@@ -62,3 +62,15 @@ int main() {
 
 % Set font back to computer modern
 \renewcommand{\sfdefault}{cmr}
+
+% An aligned equation with mutliple lines
+\begin{equation}
+  \begin{aligned}
+    W_R &= 0.299 \\
+    W_G &= 1 - W_R - W_B = 0.587 \\
+    W_B &= 0.114 \\
+    U_{max} &= 0.436 \\
+    V_{max} &= 0.615
+    \label{yuv_constants}
+  \end{aligned}
+\end{equation}
