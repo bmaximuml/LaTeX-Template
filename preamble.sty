@@ -42,6 +42,7 @@
 
 \usepackage{rotating}
 \usepackage{tabularx}
+\usepackage{trace}
 
 \usepackage{tikz}
 \usetikzlibrary{arrows,shapes,positioning,shadows,trees}
@@ -114,3 +115,35 @@
   tabsize=2,	                   % sets default tabsize to 2 spaces
   title=\lstname                   % show the filename of files included with \lstinputlisting; also try caption instead of title
 }
+
+% Styling for Verilog code listings
+\definecolor{vgreen}{RGB}{104,180,104}
+\definecolor{vblue}{RGB}{49,49,255}
+\definecolor{vorange}{RGB}{255,143,102}
+
+\lstdefinestyle{verilog-style}
+{
+    language=Verilog,
+    % identifierstyle=\color{black},
+    % commentstyle=\color{vgreen},
+    % numbers=left,
+    % numberstyle=\tiny\color{black},
+    % numbersep=10pt,
+    % tabsize=8,
+    moredelim=*[s][\colorIndex]{[}{]},
+    literate=*{:}{:}1
+}
+
+\makeatletter
+\newcommand*\@lbracket{[}
+\newcommand*\@rbracket{]}
+\newcommand*\@colon{:}
+\newcommand*\colorIndex{%
+    \edef\@temp{\the\lst@token}%
+    \ifx\@temp\@lbracket \color{black}%
+    \else\ifx\@temp\@rbracket \color{black}%
+    \else\ifx\@temp\@colon \color{black}%
+    \else \color{vorange}%
+    \fi\fi\fi
+}
+\makeatother
