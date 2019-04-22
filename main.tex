@@ -1,4 +1,4 @@
-\documentclass[12pt, a4paper, twoside, onecolumn]{article}
+\documentclass[12pt, a4paper, twoside, onecolumn]{scrreprt}
 
 \usepackage{preamble}
 
@@ -10,22 +10,26 @@
 \author{AUTHOR(s) HERE}
 
 \begin{document}
+
+% Set font back to computer modern
+\renewcommand{\sfdefault}{cmr}
+
 \maketitle
 
 % Uncomment below two lines to generate a table of contents
 % \tableofcontents
 % \newpage
 
-\section{Chapter 1}
+\chapter{Chapter 1}
 \label{chapter_1}
 
-\section{Chapter 2}
+\chapter{Chapter 2}
 \label{chapter_2}
 
 % LaTeX will not properly compile with no citations. Remove the citation below once you have made citations of your own.
 \cite{rfc1149}
 
-\bibliographystyle{plain}
+\bibliographystyle{ieeetr}
 \bibliography{bibliography}
 
 % Uncomment the four lines below to include an appendix. Use the appendix.tex file for appendices.
