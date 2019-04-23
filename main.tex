@@ -5,9 +5,11 @@
   onecolumn,
   appendixprefix=true,
   toc=chapterentrywithdots,
+  % toc=listof,
   toc=bibliography
 ]{scrreprt}
 % Remove ", toc=bibliography" from the line above to remove bibliography from ToC
+% Uncomment "toc=listof," to add the lists of tables and figures to the ToC, unnumbered
 
 \usepackage{preamble}
 
@@ -28,6 +30,15 @@
 % Comment or delete below two lines to remove table of contents
 \tableofcontents
 \newpage
+
+% Uncomment the line below to add a list of figures
+% \listoffigures
+
+% Uncomment the line below to add a list of tables
+% \listoftables
+
+% Uncomment the line below if you have either a list of figures or tables
+% \newpage
 
 \chapter{Chapter 1}
 \label{chapter_1}
